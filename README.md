@@ -82,52 +82,14 @@ cnblogs-publish 不只是一个发布按钮。
 
 让 Agent 帮你写下来，存进博客园，也留给未来的自己。
 
-## 下载与使用
-
-项目地址：<https://github.com/cnblogs/cnblogs-skills>
-
-1. 克隆或下载仓库：
-
-   ```bash
-   git clone https://github.com/cnblogs/cnblogs-skills.git
-   ```
-
-2. 把 `skills/cnblogs-publish` 放进你的 agent skills 目录（例如当前工作区的 `<workspace>/.dsh/skills/`，或用户级 skills 目录）。
-3. 首次使用，在 skill 目录运行：
-
-   ```bash
-   python3 scripts/cnblogs.py setup
-   ```
-
-   Windows 用 `python` 或 `py -3`。按系统对话框录入用户名、博客名和访问令牌即可。
-
-4. 然后直接对 Agent 说：
-
-   - “把这篇总结发到博客园。”——默认私有；
-   - “公开发布。”——进入博客园审核；
-   - “发布到首页。”——申请首页推荐，同样需要审核。
-
-也可以直接使用命令：
-
-```bash
-# 默认私有
-python3 scripts/cnblogs.py publish article.md --json
-
-# 公开发布
-python3 scripts/cnblogs.py publish article.md --publish --json
-
-# 公开发布并推荐到首页
-python3 scripts/cnblogs.py publish article.md --publish --categories "[发布至博客园首页]" --json
-```
-
-## 仓库结构
+## 把这个地址交给 Agent
 
 ```text
-cnblogs-skills/
-└── skills/
-    └── cnblogs-publish/
-        ├── SKILL.md
-        ├── scripts/
-        ├── references/
-        └── tests/
+https://github.com/cnblogs/cnblogs-skills/tree/main/skills/cnblogs-publish
 ```
+
+对 Agent 说：
+
+> 从这个地址安装 cnblogs-publish skill，然后帮我把这篇文章发布到博客园。
+
+Agent 会自行下载、安装并学习使用方法。默认发布为私有。
