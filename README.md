@@ -74,22 +74,21 @@ cnblogs-publish 不只是一个发布按钮。
 
 ## 三步开始
 
-1. 在 Agent 中启用 cnblogs-publish skill；
-2. 对 Agent 说：“把这次讨论总结成一篇博文，发布到博客园”——默认私有；
-3. 想分享时，再说一句：“公开发布”或“发布到首页”。
+1. 对 Agent 说：`把这次讨论总结成一篇博文，发布到博客园`（默认私有）；
+2. 想分享时，说：`把这次讨论总结成一篇博文，公开发布`;
+3. 或者想发布到首页，`把这次讨论总结成一篇博文，发布到首页`。
 
 从今天起，别让好问题只停留在聊天框里。
 
 让 Agent 帮你写下来，存进博客园，也留给未来的自己。
 
-## 把这个地址交给 Agent
-
-```text
-https://github.com/cnblogs/cnblogs-skills/tree/main/skills/cnblogs-publish
-```
+## 如何让Agent学习这个技能
 
 对 Agent 说：
 
-> 从这个地址安装 cnblogs-publish skill，然后帮我把这篇文章发布到博客园。
+```text
+从这个地址安装 cnblogs-publish skill，
+https://github.com/cnblogs/cnblogs-skills/tree/main/skills/cnblogs-publish
+```
 
-Agent 会自行下载、安装并学习使用方法。默认发布为私有。
+Agent 会自行下载、安装并学习使用方法。
