@@ -503,7 +503,7 @@ def upload_file(cfg: dict[str, Any], creds: dict[str, str], path: Path) -> str:
     if not path.is_file():
         raise UserError("图片不存在：%s" % path)
     mime = mimetypes.guess_type(path.name)[0] or "application/octet-stream"
-    payload = base64.b64encode(path.read_bytes()).decode("ascii")
+    payload = path.read_bytes()
     blogid, username, token = auth_params(cfg, creds)
     result = rpc(
         cfg, creds,
